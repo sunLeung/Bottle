@@ -1,0 +1,104 @@
+a {
+	color: #ccc;
+	text-decoration: none !important;
+}
+
+.popover{
+	width:400px;
+	max-width:400px;
+	height:480px;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 1010;
+	padding: 1px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,0.2);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	margin-top:0px !important;
+	display: none;
+	padding: 20px;
+}
+
+.preview{
+	display:none;
+	width: 285px;
+	height: 340px;
+	position: absolute;
+	left: 59px;
+	z-index: 9999;
+	top: 70px;
+	background: #ccc;
+	padding: 20px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.flist{
+	cursor: pointer;
+}
+
+.flist tr td{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.flist tr td div{
+	width:80px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.flist tr td:first-child{
+	width:80px;
+}
+
+.chatTab{
+	text-align:left;
+	display: none;
+	width: 430px;
+	height: 490px;
+	background: #fff;
+	position: relative;
+	left: 35px;
+	top: -513px;
+	z-index: 99999;
+}
+
+.chatWindow{
+	margin: 10px;
+	float: left;
+	width: 86.5%;
+	height: 370px;
+	overflow: auto;
+}
+
+.myMsg{
+	margin-bottom: 10px;
+	padding: 8px 14px 8px 14px;
+	overflow-wrap: break-word;
+	width: 225px;
+	position: relative;
+	left: 116px;
+}
+
+.yourMsg{
+	margin-bottom: 10px;
+	padding: 8px 14px 8px 14px;
+	overflow-wrap: break-word;
+	width: 225px;
+}

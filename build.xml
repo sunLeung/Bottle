@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="gmtool" basedir="." default="makewar">
+	<property name="debug" value="true" />
+	<property name="encoding" value="UTF-8" />
+	<property name="classpath_lib" value="WebRoot/WEB-INF/lib" />
+	<property name="classes" value="WebRoot/WEB-INF/classes" />
+	<property name="sources" value="${basedir}/src" />
+	<path id="classpath">
+		<fileset dir="${classpath_lib}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<property name="target" value="1.6" />
+	<property name="source" value="1.6" />
+
+	<target name="init">
+		<delete dir ="${classes}"/>
+		<mkdir dir ="${classes}"/>
+	</target>
+	
+	<target name="complie" depends="init">
+		<javac debug="${debug}" encoding="${encoding}" srcdir="${sources}" destdir="${classes}" classpathref="classpath"/>
+	</target>
+	
+	<target name="makewar" depends="complie">
+		<war warfile="ROOT.war" webxml="WebRoot/WEB-INF/web.xml">
+			<lib dir="${classpath_lib}">
+				<include name="**" />
+			</lib>
+			<classes dir="${classes}" />
+			<fileset dir="WebRoot/" excludes="WEB-INF/conf/"/>
+		</war>
+	</target>
+
+</project>
